@@ -1,40 +1,26 @@
 # 🎮 Steam Dataset EDA Flask App
 
-A simple Flask web app that cleans and analyzes the Steam 200k dataset. It generates visual insights like most played games, total/average playtime, and top users, and displays them using charts.
+A simple and interactive Flask web app for exploring and analyzing the **Steam 200k dataset**. It provides insights into user behavior, most played games, and overall statistics using clean and informative visualizations.
+
+---
+
+## 📊 Features
+
+- Data cleaning and preprocessing of the raw `steam-200k.csv` dataset.
+- Exploratory Data Analysis (EDA) with visualizations.
+- Insights such as:
+  - Most played games
+  - Average and total playtime
+  - Top active users
+- Interactive charts and a user-friendly dashboard powered by Flask.
 
 ---
 
 ## 🚀 How to Run This Project
 
-### 1. Clone the repository
+### 1. Clone the Repository
 
-
+```bash
 git clone https://github.com/YOUR_USERNAME/steam-flask-eda.git
 cd steam-flask-eda
-2. Set up a virtual environment (optional)
-bash
-Copy
-Edit
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-3. Install dependencies
-bash
-Copy
-Edit
-pip install -r requirements.txt
-4. Add dataset
-Download the raw dataset (steam-200k.csv) from Kaggle and place it in the project folder.
-
-5. Run the cleaning and EDA scripts
-bash
-Copy
-Edit
-python clean.py
-python eda.py
-6. Start the Flask app
-bash
-Copy
-Edit
-python app.py
-Then visit: http://127.0.0.1:5000
 
