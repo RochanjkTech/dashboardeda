@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Steam Game Analysis</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        img { max-width: 100%; margin: 20px 0; }
+        h2 { margin-top: 40px; }
+        table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+    </style>
+</head>
+<body>
+    <h1>Steam Dataset EDA Results</h1>
+
+    <h2>Behavior Distribution</h2>
+    <img src="{{ url_for('static', filename='images/behavior_distribution.png') }}" alt="Behavior Distribution">
+
+    <h2>Top 10 Most Played Games (by Count)</h2>
+    <table>
+        <tr><th>Game</th><th>Count</th></tr>
+        {% for game, count in top10_games.items() %}
+        <tr><td>{{ game }}</td><td>{{ count }}</td></tr>
+        {% endfor %}
+    </table>
+
+    <h2>Top 10 Games by Total Hours Played</h2>
+    <img src="{{ url_for('static', filename='images/top10_played_games.png') }}" alt="Top 10 Games by Hours">
+    <table>
+        <tr><th>Game</th><th>Total Hours</th></tr>
+        {% for game, hours in total_hours.items() %}
+        <tr><td>{{ game }}</td><td>{{ "%.2f"|format(hours) }}</td></tr>
+        {% endfor %}
+    </table>
+
+    <h2>Top 10 Games by Average Hours Played</h2>
+    <table>
+        <tr><th>Game</th><th>Avg Hours</th></tr>
+        {% for game, hours in avg_hours.items() %}
+        <tr><td>{{ game }}</td><td>{{ "%.2f"|format(hours) }}</td></tr>
+        {% endfor %}
+    </table>
+
+    <h2>Top 10 Users by Total Hours Played</h2>
+    <img src="{{ url_for('static', filename='images/top10_users_play.png') }}" alt="Top 10 Users by Hours">
+    <table>
+        <tr><th>User ID</th><th>Total Hours</th></tr>
+        {% for user, hours in top10_users.items() %}
+        <tr><td>{{ user }}</td><td>{{ "%.2f"|format(hours) }}</td></tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

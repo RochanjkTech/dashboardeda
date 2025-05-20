@@ -1,0 +1,13 @@
+prefix=/home/rochan/Desktop/jktechtrail/venv
+exec_prefix=/home/rochan/Desktop/jktechtrail/venv
+libdir=/home/rochan/Desktop/jktechtrail/venv/lib
+sharedlibdir=/home/rochan/Desktop/jktechtrail/venv/lib
+includedir=/home/rochan/Desktop/jktechtrail/venv/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
