@@ -1,0 +1,29 @@
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+venv/
+
+
+.ipynb_checkpoints
+
+
+.vscode/
+
+
+.DS_Store
+
+
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+
+
+# Lock files or temp files
+.*.swp
+~*
+
+# Ignore environment files (if any)
+.env
